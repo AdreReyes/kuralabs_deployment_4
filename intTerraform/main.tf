@@ -61,10 +61,10 @@ output "instance_ip" {
      resource "aws_route_table" "public-crt" {
      vpc_id = "${aws_vpc.prod-vpc.id}"
     
-     resource "aws_route_table_association" "crta-public-subnet-1"{
-     subnet_id      = "${aws_subnet.crta-public-subnet-1.id}"
-     route_table_id = "${aws_route_table.public-crt.id}"
-     }
+     #resource "aws_route_table_association" "crta-public-subnet-1"{
+     #subnet_id      = "${aws_subnet.crta-public-subnet-1.id}"
+     #route_table_id = "${aws_route_table.public-crt.id}"
+     #}
 
      route {
          //associated subnet can reach everywhere
