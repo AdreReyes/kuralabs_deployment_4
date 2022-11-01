@@ -68,7 +68,7 @@ output "instance_ip" {
 
      route {
          //associated subnet can reach everywhere
-         cidr_block = "10.0.0.0/16" 
+         cidr_block = "0.0.0.0/16" 
          //CRT uses this IGW to reach internet
          gateway_id = "${aws_internet_gateway.prod-igw.id}" 
      }
