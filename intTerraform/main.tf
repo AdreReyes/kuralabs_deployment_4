@@ -74,7 +74,7 @@ output "instance_ip" {
      }
     
      tags = {
-         "Name" : "prod-public-crt"
+         "Name" : "public-crt"
      }
 
         }
