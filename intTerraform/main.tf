@@ -59,7 +59,7 @@ output "instance_ip" {
       }
 
      resource "aws_route_table" "public-crt" {
-     vpc_id = "${aws_vpc.main-vpc.id}"
+     vpc_id = "${aws_vpc.prod-vpc.id}"
     
      resource "aws_route_table_association" "crta-public-subnet-1"{
      subnet_id      = "${aws_subnet.crta-public-subnet-1.id}"
