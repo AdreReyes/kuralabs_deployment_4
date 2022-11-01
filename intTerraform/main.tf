@@ -28,7 +28,6 @@ output "instance_ip" {
   
 }
 
-module "vpc" {
       resource "aws_vpc" "prod-vpc" {
        cidr_block           = "10.0.0.0/16"
        enable_dns_support   = "true" #gives you an internal domain name
@@ -39,9 +38,8 @@ module "vpc" {
         "Name" : "prod-vpc"
     }
 }
-}
 
-module "network" {
+
      resource "aws_internet_gateway" "prod-igw" {
          vpc_id = "${aws_vpc.prod-vpc.id}"
          
@@ -49,7 +47,7 @@ module "network" {
          "Name" : "prod-igw"
      }
      }
-}
+
      resource "aws_subnet" "prod-subnet-public-1" {
     vpc_id                  = "${aws_vpc.prod-vpc.id}"
     cidr_block              = "10.0.1.0/24"
