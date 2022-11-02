@@ -63,7 +63,7 @@ output "instance_ip" {
      }
 
      resource "aws_route_table_association" "crta-public-subnet-1"{
-     subnet_id      = "${aws_subnet.crta-public-subnet-1.id}"
+     subnet_id      = "${aws_subnet.prod-subnet-public-1.id}"
      route_table_id = "${aws_route_table.public-crt.id}"
 
      route {
