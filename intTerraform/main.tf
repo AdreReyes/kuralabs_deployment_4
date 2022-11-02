@@ -65,7 +65,6 @@ output "instance_ip" {
      resource "aws_route_table_association" "crta-public-subnet-1"{
      subnet_id      = "${aws_subnet.crta-public-subnet-1.id}"
      route_table_id = "${aws_route_table.public-crt.id}"
-     }
 
      route {
          //associated subnet can reach everywhere
@@ -76,4 +75,5 @@ output "instance_ip" {
     
      tags = {
          "Name" : "public-crt"
+     }
      }
